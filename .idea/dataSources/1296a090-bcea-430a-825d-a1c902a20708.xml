@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="database.sqlite">
+  <database-model serializer="dbm" rdbms="SQLITE" format-version="4.11">
+    <root id="1">
+      <ServerVersion>3.25.1</ServerVersion>
+    </root>
+    <schema id="2" parent="1" name="main">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <collation id="3" parent="1" name="BINARY"/>
+    <collation id="4" parent="1" name="NOCASE"/>
+    <collation id="5" parent="1" name="RTRIM"/>
+    <table id="6" parent="2" name="books"/>
+    <table id="7" parent="2" name="migrations"/>
+    <table id="8" parent="2" name="password_resets"/>
+    <table id="9" parent="2" name="sqlite_master">
+      <System>1</System>
+    </table>
+    <table id="10" parent="2" name="sqlite_sequence">
+      <System>1</System>
+    </table>
+    <table id="11" parent="2" name="telescope_entries"/>
+    <table id="12" parent="2" name="telescope_entries_tags"/>
+    <table id="13" parent="2" name="telescope_monitoring"/>
+    <table id="14" parent="2" name="users"/>
+    <column id="15" parent="6" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="16" parent="6" name="name">
+      <Position>2</Position>
+      <DataType>varchar|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="17" parent="6" name="authur">
+      <Position>3</Position>
+      <DataType>varchar|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="18" parent="6" name="created_at">
+      <Position>4</Position>
+      <DataType>datetime|0s</DataType>
+    </column>
+    <column id="19" parent="6" name="updated_at">
+      <Position>5</Position>
+      <DataType>datetime|0s</DataType>
+    </column>
+    <index id="20" parent="6" name="books_id_index">
+      <ColNames>id</ColNames>
+      <ColumnCollations></ColumnCollations>
+    </index>
+    <key id="21" parent="6">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>books_id_index</UnderlyingIndexName>
+    </key>
+    <column id="22" parent="7" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="23" parent="7" name="migration">
+      <Position>2</Position>
+      <DataType>varchar|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="24" parent="7" name="batch">
+      <Position>3</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="25" parent="7">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="26" parent="8" name="email">
+      <Position>1</Position>
+      <DataType>varchar|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="27" parent="8" name="token">
+      <Position>2</Position>
+      <DataType>varchar|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="28" parent="8" name="created_at">
+      <Position>3</Position>
+      <DataType>datetime|0s</DataType>
+    </column>
+    <index id="29" parent="8" name="password_resets_email_index">
+      <ColNames>email</ColNames>
+      <ColumnCollations></ColumnCollations>
+    </index>
+    <column id="30" parent="9" name="type">
+      <Position>1</Position>
+      <DataType>text|0s</DataType>
+    </column>
+    <column id="31" parent="9" name="name">
+      <Position>2</Position>
+      <DataType>text|0s</DataType>
+    </column>
+    <column id="32" parent="9" name="tbl_name">
+      <Position>3</Position>
+      <DataType>text|0s</DataType>
+    </column>
+    <column id="33" parent="9" name="rootpage">
+      <Position>4</Position>
+      <DataType>int|0s</DataType>
+    </column>
+    <column id="34" parent="9" name="sql">
+      <Position>5</Position>
+      <DataType>text|0s</DataType>
+    </column>
+    <column id="35" parent="10" name="name">
+      <Position>1</Position>
+    </column>
+    <column id="36" parent="10" name="seq">
+      <Position>2</Position>
+    </column>
+    <column id="37" parent="11" name="sequence">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="38" parent="11" name="uuid">
+      <Position>2</Position>
+      <DataType>varchar|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="39" parent="11" name="batch_id">
+      <Position>3</Position>
+      <DataType>varchar|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="40" parent="11" name="family_hash">
+      <Position>4</Position>
+      <DataType>varchar|0s</DataType>
+    </column>
+    <column id="41" parent="11" name="should_display_on_index">
+      <Position>5</Position>
+      <DataType>tinyint(1)|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;1&apos;</DefaultExpression>
+    </column>
+    <column id="42" parent="11" name="type">
+      <Position>6</Position>
+      <DataType>varchar|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="43" parent="11" name="content">
+      <Position>7</Position>
+      <DataType>text|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="44" parent="11" name="created_at">
+      <Position>8</Position>
+      <DataType>datetime|0s</DataType>
+    </column>
+    <index id="45" parent="11" name="telescope_entries_uuid_unique">
+      <ColNames>uuid</ColNames>
+      <ColumnCollations></ColumnCollations>
+      <Unique>1</Unique>
+    </index>
+    <index id="46" parent="11" name="telescope_entries_batch_id_index">
+      <ColNames>batch_id</ColNames>
+      <ColumnCollations></ColumnCollations>
+    </index>
+    <index id="47" parent="11" name="telescope_entries_family_hash_index">
+      <ColNames>family_hash</ColNames>
+      <ColumnCollations></ColumnCollations>
+    </index>
+    <index id="48" parent="11" name="telescope_entries_type_should_display_on_index_index">
+      <ColNames>type
+should_display_on_index</ColNames>
+      <ColumnCollations></ColumnCollations>
+    </index>
+    <key id="49" parent="11">
+      <ColNames>sequence</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="50" parent="12" name="entry_uuid">
+      <Position>1</Position>
+      <DataType>varchar|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="51" parent="12" name="tag">
+      <Position>2</Position>
+      <DataType>varchar|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="52" parent="12" name="telescope_entries_tags_entry_uuid_tag_index">
+      <ColNames>entry_uuid
+tag</ColNames>
+      <ColumnCollations></ColumnCollations>
+    </index>
+    <index id="53" parent="12" name="telescope_entries_tags_tag_index">
+      <ColNames>tag</ColNames>
+      <ColumnCollations></ColumnCollations>
+    </index>
+    <foreign-key id="54" parent="12">
+      <ColNames>entry_uuid</ColNames>
+      <RefTableName>telescope_entries</RefTableName>
+      <RefColNames>uuid</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="55" parent="13" name="tag">
+      <Position>1</Position>
+      <DataType>varchar|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="56" parent="14" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="57" parent="14" name="name">
+      <Position>2</Position>
+      <DataType>varchar|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="58" parent="14" name="email">
+      <Position>3</Position>
+      <DataType>varchar|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="59" parent="14" name="email_verified_at">
+      <Position>4</Position>
+      <DataType>datetime|0s</DataType>
+    </column>
+    <column id="60" parent="14" name="password">
+      <Position>5</Position>
+      <DataType>varchar|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="61" parent="14" name="remember_token">
+      <Position>6</Position>
+      <DataType>varchar|0s</DataType>
+    </column>
+    <column id="62" parent="14" name="created_at">
+      <Position>7</Position>
+      <DataType>datetime|0s</DataType>
+    </column>
+    <column id="63" parent="14" name="updated_at">
+      <Position>8</Position>
+      <DataType>datetime|0s</DataType>
+    </column>
+    <index id="64" parent="14" name="users_email_unique">
+      <ColNames>email</ColNames>
+      <ColumnCollations></ColumnCollations>
+      <Unique>1</Unique>
+    </index>
+    <key id="65" parent="14">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
